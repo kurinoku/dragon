@@ -255,7 +255,7 @@ bool is_uri(char *uri) {
         if (uri[i] == '/')
             return false;
         else if (uri[i] == ':')
-            return true;
+            return (uri[i + 1] && uri[i + 1] == '/' && uri[i + 2] && uri[i + 2] == '/');
     return false;
 }
 
